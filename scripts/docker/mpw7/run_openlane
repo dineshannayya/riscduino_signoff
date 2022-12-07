@@ -1,0 +1,8 @@
+
+# set the enviromental variable $CARAVEL_ROOT
+#
+#
+docker build --build-arg --rm -t riscduino/openlane:mpw7 -f docker_openlane /opt/pdk_mpw7/sky130A
+#
+## cross-check the pdk data inside docker inside /opt directory
+#docker run -ti --rm  -v $(pwd):/project  riscduino/openlane:mpw7  bash

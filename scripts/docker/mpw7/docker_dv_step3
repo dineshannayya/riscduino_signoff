@@ -1,0 +1,8 @@
+FROM riscduino/dv_setup:mpw7
+
+
+ENV PDK_ROOT=/opt/pdk
+ENV PDK_PATH=/opt/pdk/sky130A
+ENV PDK=sky130A
+
+COPY . /opt/pdk/sky130A

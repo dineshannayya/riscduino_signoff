@@ -1,0 +1,21 @@
+# 1. Remove the Old Build
+docker image rmi riscduino/dv_setup:mpw7
+
+# 2. Build iverilog
+docker build --build-arg --rm -t riscduino/dv_setup:mpw7 -f docker_dv_step1  .
+
+#3. Copy riscv32 binary
+docker build --build-arg --rm -t riscduino/dv_setup:mpw7 -f docker_dv_step2  /home/dinesha/.arduino15/packages/riscduino/tools/riscv32-unknown-elf-gcc/
+
+#4. Copy the pdk 
+docker build --build-arg --rm -t riscduino/dv_setup:mpw7 -f docker_dv_step3  /opt/pdk_mpw7/sky130A
+
+#5. Copy the caravel RTL
+docker build --build-arg --rm -t riscduino/dv_setup:mpw7 -f docker_dv_step4  /home/dinesha/workarea/efabless/MPW-7/caravel/verilog
+
+#5. Copy the mgmt_core_wrapper RTL
+docker build --build-arg --rm -t riscduino/dv_setup:mpw7 -f docker_dv_step5  /home/dinesha/workarea/efabless/MPW-7/caravel/mgmt_core_wrapper/verilog
+
+
+## cross-check the pdk and risc32i data inside docker inside /opt directory
+#docker run -ti --rm  -v $(pwd):/project  riscduino/dv_setup:mpw7  bash

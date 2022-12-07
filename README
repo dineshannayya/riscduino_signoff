@@ -1,0 +1,12 @@
+This folder hold the all the sign-off data of riscdunio project score/dcore/qcore
+
+1. To run STA, Make sure that correpsonding caravel/mgmt repo installted as per make file
+
+   make install
+   make install_mcw
+
+2. To Run the Timing closure
+   make caravel-sta
+
+3. Result will be available inside
+   signoff/caravel 

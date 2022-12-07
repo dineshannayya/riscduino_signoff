@@ -1,0 +1,7 @@
+FROM riscduino/dv_setup:mpw7
+
+
+ENV PATH="/opt/riscv32i/bin/:$PATH"
+ENV GCC_PATH=/opt/riscv32i/bin
+
+COPY ./3f7b3696217548bc31aeccf9a0c89bdfa4e16a8f /opt/riscv32i

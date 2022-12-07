@@ -1,0 +1,9 @@
+FROM riscduino/openlane:mpw7
+
+# Copy the caravel and pdk folder into /opt folder
+ENV CARAVEL_ROOT=/opt/caravel
+ENV PDK_ROOT=/opt/pdk
+ENV PDK_PATH=/opt/pdk/sky130A
+ENV PDK=sky130A
+
+COPY . /opt/pdk/sky130A

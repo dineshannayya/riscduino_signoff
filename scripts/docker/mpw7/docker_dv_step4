@@ -1,0 +1,7 @@
+FROM riscduino/dv_setup:mpw7
+
+
+ENV CARAVEL_ROOT=/opt/caravel
+ENV CORE_VERILOG_PATH=/opt/caravel/mgmt_core_wrapper/verilog
+
+COPY . /opt/caravel/verilog
