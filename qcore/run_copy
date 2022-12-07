@@ -1,0 +1,17 @@
+mkdir -p 6.2/verilog/gl
+mkdir -p 6.2/verilog/rtl
+cp -rf ~/workarea/opencore/git/riscduino_qcore/lef             6.2/lef
+cp -rf ~/workarea/opencore/git/riscduino_qcore/def             6.2/def
+cp -rf ~/workarea/opencore/git/riscduino_qcore/gds             6.2/gds
+cp -rf ~/workarea/opencore/git/riscduino_qcore/sdc             6.2/sdc
+cp -rf ~/workarea/opencore/git/riscduino_qcore/spi             6.2/spi
+cp -rf ~/workarea/opencore/git/riscduino_qcore/env             6.2/env
+cp -rf ~/workarea/opencore/git/riscduino_qcore/signoff         6.2/signoff
+cp -rf ~/workarea/opencore/git/riscduino_qcore/logs            6.2/logs
+cp -rf ~/workarea/opencore/git/riscduino_qcore/deps            6.2/deps
+cp -rf ~/workarea/opencore/git/riscduino_qcore/verilog/gl/*    6.2/verilog/gl
+cp     ~/workarea/opencore/git/riscduino_qcore/verilog/rtl/*   6.2/verilog/rtl
+cp -rf ~/workarea/opencore/git/riscduino_qcore/Makefile        6.2/Makefile
+\rm -rf 6.2/verilog/gl/*.nl.v
+\rm -rf 6.2/verilog/gl/temp
+gzip -d -r .
